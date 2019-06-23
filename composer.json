@@ -33,11 +33,20 @@
         }
     },
     "scripts": {
+        "start-selenium": [
+            "docker start selenium-chrome"
+        ],
+        "stop-selenium": [
+            "docker stop selenium-chrome"
+        ],
+        "download-selenium": [
+            "docker create --name selenium-chrome --net=host selenium/standalone-chrome"
+        ],
         "acceptance-php": [
-            "vendor/bin/codeception run acceptance-php --steps"
+            "./vendor/bin/codecept run acceptance-php --steps"
         ],
         "acceptance-web": [
-            "vendor/bin/codeception run acceptance-web --steps"
+            "./vendor/bin/codecept run acceptance-web --steps"
         ],
         "server": [
             "php -S localhost:8000 -t public"
