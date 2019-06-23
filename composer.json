@@ -33,6 +33,12 @@
         }
     },
     "scripts": {
+        "acceptance-php": [
+            "vendor/bin/codeception run acceptance-php --steps"
+        ],
+        "acceptance-web": [
+            "vendor/bin/codeception run acceptance-web --steps"
+        ],
         "test": [
             "vendor/bin/phpunit"
         ],
